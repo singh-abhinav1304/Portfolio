@@ -6,10 +6,10 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="relative z-10 min-h-screen flex items-center text-white px-4 md:px-6"
+      className="relative z-10 min-h-screen flex items-center justify-center text-white px-6 pt-24"
     >
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
 
 
         {/* LEFT SIDE */}

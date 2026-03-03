@@ -76,59 +76,71 @@ function About() {
 
 
         {/* Timeline */}
-        <div className="max-w-5xl mx-auto mt-20 md:mt-24">
+<div className="max-w-5xl mx-auto mt-24">
 
-          <h3 className="text-xl md:text-2xl font-bold text-center text-sky-400 mb-10 md:mb-12">
-            My Journey
-          </h3>
+  <h3 className="text-2xl font-bold text-center text-sky-400 mb-12">
+    My Journey
+  </h3>
 
-          {/* Desktop Timeline */}
-          <div className="hidden md:block relative">
+  {/* MOBILE TIMELINE (Snake) */}
+  <div className="md:hidden relative border-l-2 border-slate-700 ml-4">
 
-            <div className="absolute top-4 left-0 w-full h-1 bg-slate-700"></div>
+    {timeline.map((item, index) => (
 
-            <div className="flex justify-between text-center relative">
+      <div
+        key={index}
+        className="mb-12 ml-6"
+      >
 
-              {timeline.map((item, index) => (
-                <div key={index} className="flex-1">
+        <div className="absolute -left-3 w-6 h-6 bg-sky-400 rounded-full"></div>
 
-                  <div className="w-6 h-6 bg-sky-400 rounded-full mx-auto"></div>
+        <h4 className="font-semibold text-lg">
+          {item.year}
+        </h4>
 
-                  <h4 className="mt-6 font-semibold">
-                    {item.year}
-                  </h4>
+        <p className="text-gray-400 text-sm mt-1">
+          {item.text}
+        </p>
 
-                  <p className="text-gray-400 mt-2 text-sm px-2">
-                    {item.text}
-                  </p>
+      </div>
 
-                </div>
-              ))}
+    ))}
 
-            </div>
-
-          </div>
+  </div>
 
 
-          {/* Mobile Timeline */}
-          <div className="md:hidden space-y-6">
+  {/* DESKTOP TIMELINE (Original Horizontal) */}
+  <div className="hidden md:block relative">
 
-            {timeline.map((item, index) => (
-              <div key={index} className="flex items-start gap-4">
+    {/* horizontal line */}
+    <div className="absolute top-4 left-0 w-full h-1 bg-slate-700"></div>
 
-                <div className="w-4 h-4 mt-1 bg-sky-400 rounded-full"></div>
+    <div className="flex justify-between text-center relative">
 
-                <div>
-                  <h4 className="font-semibold">{item.year}</h4>
-                  <p className="text-gray-400 text-sm">{item.text}</p>
-                </div>
+      {timeline.map((item, index) => (
 
-              </div>
-            ))}
+        <div key={index} className="flex-1">
 
-          </div>
+          {/* dot */}
+          <div className="w-6 h-6 bg-sky-400 rounded-full mx-auto"></div>
+
+          <h4 className="mt-6 font-semibold">
+            {item.year}
+          </h4>
+
+          <p className="text-gray-400 mt-2 text-sm px-2">
+            {item.text}
+          </p>
 
         </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+</div>
 
 
       </div>

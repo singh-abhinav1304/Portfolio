@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react"
+import { FaBars, FaTimes } from "react-icons/fa"
 
 function Navbar() {
 
   const [active, setActive] = useState("")
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
 
@@ -23,7 +25,6 @@ function Navbar() {
 
   }, [])
 
-
   return (
 
     <nav className="fixed top-0 w-full bg-slate-950/80 backdrop-blur-md text-white z-50">
@@ -36,46 +37,87 @@ function Navbar() {
         </h1>
 
 
-        {/* Navigation */}
-        <ul className="flex gap-4 md:gap-8 text-sm md:text-base text-gray-300">
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex gap-8 text-gray-300">
 
           <li>
-            <a
-              href="#about"
-              className={`hover:text-sky-400 transition ${active === "about" ? "text-sky-400" : ""}`}
-            >
+            <a href="#about"
+              className={`hover:text-sky-400 transition ${active === "about" ? "text-sky-400" : ""}`}>
               About
             </a>
           </li>
 
           <li>
-            <a
-              href="#skills"
-              className={`hover:text-sky-400 transition ${active === "skills" ? "text-sky-400" : ""}`}
-            >
+            <a href="#skills"
+              className={`hover:text-sky-400 transition ${active === "skills" ? "text-sky-400" : ""}`}>
               Skills
             </a>
           </li>
 
           <li>
-            <a
-              href="#projects"
-              className={`hover:text-sky-400 transition ${active === "projects" ? "text-sky-400" : ""}`}
-            >
+            <a href="#projects"
+              className={`hover:text-sky-400 transition ${active === "projects" ? "text-sky-400" : ""}`}>
               Projects
             </a>
           </li>
 
           <li>
-            <a
-              href="#contact"
-              className={`hover:text-sky-400 transition ${active === "contact" ? "text-sky-400" : ""}`}
-            >
+            <a href="#contact"
+              className={`hover:text-sky-400 transition ${active === "contact" ? "text-sky-400" : ""}`}>
               Contact
             </a>
           </li>
 
         </ul>
+
+
+        {/* Mobile Hamburger */}
+        <button
+          className="md:hidden text-xl"
+          onClick={() => setMenuOpen(true)}
+        >
+          <FaBars />
+        </button>
+
+      </div>
+
+
+      {/* Dark Overlay */}
+      {menuOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 md:hidden"
+          onClick={() => setMenuOpen(false)}
+        ></div>
+      )}
+
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-slate-950 transform transition-transform duration-300 md:hidden ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+
+        {/* Close Button */}
+        <div className="flex justify-end p-6">
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="text-xl"
+          >
+            <FaTimes />
+          </button>
+        </div>
+
+
+        {/* Links */}
+        <div className="flex flex-col gap-8 px-8 text-lg">
+
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+
+        </div>
 
       </div>
 
