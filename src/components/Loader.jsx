@@ -1,28 +1,28 @@
-import { useEffect, useState } from "react"
-import ParticlesBackground from "../components/ParticlesBackground"
-import Home from "../pages/Home"
-import Loader from "../components/Loader"
+// import { useEffect, useState } from "react"
+// import ParticlesBackground from "../components/ParticlesBackground"
+// import Home from "../pages/Home"
+// import Loader from "../components/Loader"
 
-function App() {
+// function App() {
 
-  const [loading, setLoading] = useState(true)
+//   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
+//   useEffect(() => {
 
-    setLoading(false)
+//     setLoading(false)
 
-  }, [])
+//   }, [])
 
-  if (loading) {
-    return <Loader />
-  }
+//   if (loading) {
+//     return <Loader />
+//   }
 
-  return (
-    <div>
-      <ParticlesBackground />
-      <Home />
-    </div>
-  )
-}
+//   return (
+//     <div>
+//       <ParticlesBackground />
+//       <Home />
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
