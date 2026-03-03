@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react"
 
 function Navbar() {
+
   const [active, setActive] = useState("")
+
   useEffect(() => {
 
     const sections = document.querySelectorAll("section")
@@ -20,21 +22,27 @@ function Navbar() {
     sections.forEach((section) => observer.observe(section))
 
   }, [])
+
+
   return (
+
     <nav className="fixed top-0 w-full bg-slate-950/80 backdrop-blur-md text-white z-50">
 
-      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <div className="max-w-6xl mx-auto flex justify-between items-center px-4 md:px-6 py-4">
 
-        <h1 className="text-xl font-bold text-sky-400">
+        {/* Logo */}
+        <h1 className="text-lg md:text-xl font-bold text-sky-400">
           Abhinav
         </h1>
 
-        <ul className="flex gap-8 text-gray-300">
+
+        {/* Navigation */}
+        <ul className="flex gap-4 md:gap-8 text-sm md:text-base text-gray-300">
 
           <li>
             <a
               href="#about"
-              className={`hover:text-sky-400 ${active === "about" ? "text-sky-400" : ""}`}
+              className={`hover:text-sky-400 transition ${active === "about" ? "text-sky-400" : ""}`}
             >
               About
             </a>
@@ -43,7 +51,7 @@ function Navbar() {
           <li>
             <a
               href="#skills"
-              className={`hover:text-sky-400 ${active === "skills" ? "text-sky-400" : ""}`}
+              className={`hover:text-sky-400 transition ${active === "skills" ? "text-sky-400" : ""}`}
             >
               Skills
             </a>
@@ -52,7 +60,7 @@ function Navbar() {
           <li>
             <a
               href="#projects"
-              className={`hover:text-sky-400 ${active === "projects" ? "text-sky-400" : ""}`}
+              className={`hover:text-sky-400 transition ${active === "projects" ? "text-sky-400" : ""}`}
             >
               Projects
             </a>
@@ -61,7 +69,7 @@ function Navbar() {
           <li>
             <a
               href="#contact"
-              className={`hover:text-sky-400 ${active === "contact" ? "text-sky-400" : ""}`}
+              className={`hover:text-sky-400 transition ${active === "contact" ? "text-sky-400" : ""}`}
             >
               Contact
             </a>
@@ -72,6 +80,7 @@ function Navbar() {
       </div>
 
     </nav>
+
   )
 }
 

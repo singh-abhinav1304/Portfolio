@@ -1,20 +1,28 @@
-function Loader() {
+import { useEffect, useState } from "react"
+import ParticlesBackground from "../components/ParticlesBackground"
+import Home from "../pages/Home"
+import Loader from "../components/Loader"
+
+function App() {
+
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+
+    setLoading(false)
+
+  }, [])
+
+  if (loading) {
+    return <Loader />
+  }
+
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-slate-950 z-200">
-
-      <div className="flex flex-col items-center gap-4">
-
-        {/* spinner */}
-        <div className="w-12 h-12 border-4 border-sky-400 border-t-transparent rounded-full animate-spin"></div>
-
-        <p className="text-gray-400 text-sm">
-          Loading Portfolio...
-        </p>
-
-      </div>
-
+    <div>
+      <ParticlesBackground />
+      <Home />
     </div>
   )
 }
 
-export default Loader
+export default App

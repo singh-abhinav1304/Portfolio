@@ -1,70 +1,70 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 function Footer() {
-    return (
-        <footer className="border-t border-slate-800 mt-20 py-10 text-gray-400">
+  return (
+    <footer className="border-t border-slate-800 mt-16 md:mt-20 py-8 md:py-10 text-gray-400">
 
-            <div className="max-w-6xl mx-auto px-6 text-center">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
 
-                {/* Navigation Links */}
-                <div className="flex justify-center gap-8 mb-6 text-sm">
+        {/* Navigation Links */}
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-6 text-sm">
 
-                    <a href="#about" className="hover:text-sky-400 transition">
-                        About
-                    </a>
+          <a href="#about" className="hover:text-sky-400 transition">
+            About
+          </a>
 
-                    <a href="#skills" className="hover:text-sky-400 transition">
-                        Skills
-                    </a>
+          <a href="#skills" className="hover:text-sky-400 transition">
+            Skills
+          </a>
 
-                    <a href="#projects" className="hover:text-sky-400 transition">
-                        Projects
-                    </a>
+          <a href="#projects" className="hover:text-sky-400 transition">
+            Projects
+          </a>
 
-                    <a href="#contact" className="hover:text-sky-400 transition">
-                        Contact
-                    </a>
+          <a href="#contact" className="hover:text-sky-400 transition">
+            Contact
+          </a>
 
-                </div>
-
-
-                {/* Social Icons */}
-                <div className="flex justify-center gap-6 text-xl mb-6">
-
-                    <a
-                        href="https://github.com/singh-abhinav1304"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-sky-400 transition"
-                    >
-                        <FaGithub />
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/in/singhabhinav13/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-sky-400 transition"
-                    >
-                        <FaLinkedin />
-                    </a>
-
-                </div>
+        </div>
 
 
-                {/* Copyright */}
-                <p className="text-sm">
-                    © {new Date().getFullYear()} Abhinav Singh
-                </p>
+        {/* Social Icons */}
+        <div className="flex justify-center gap-6 text-xl md:text-2xl mb-6">
 
-                <p className="text-xs mt-2 text-gray-500">
-                    Built with React & Tailwind CSS
-                </p>
+          <a
+            href="https://github.com/singh-abhinav1304"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-sky-400 transition"
+          >
+            <FaGithub />
+          </a>
 
-            </div>
+          <a
+            href="https://www.linkedin.com/in/singhabhinav13/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-sky-400 transition"
+          >
+            <FaLinkedin />
+          </a>
 
-        </footer>
-    )
+        </div>
+
+
+        {/* Copyright */}
+        <p className="text-sm">
+          © {new Date().getFullYear()} Abhinav Singh
+        </p>
+
+        <p className="text-xs mt-2 text-gray-500">
+          Built with React & Tailwind CSS
+        </p>
+
+      </div>
+
+    </footer>
+  )
 }
 
 export default Footer

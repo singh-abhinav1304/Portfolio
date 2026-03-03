@@ -13,29 +13,24 @@ function ParticlesBackground() {
       id="tsparticles"
       init={particlesInit}
 
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: -1
-      }}
+      className="fixed top-0 left-0 w-full h-full -z-10"
 
       options={{
+
         background: {
           color: "#020617"
         },
+
         fullScreen: {
-          enable: true,
-          zIndex: -1
+          enable: false
         },
 
         fpsLimit: 60,
 
         particles: {
+
           number: {
-            value: 100,
+            value: 70, // reduced for performance
             density: {
               enable: true,
               area: 800
@@ -48,15 +43,15 @@ function ParticlesBackground() {
 
           links: {
             enable: true,
-            distance: 140,
+            distance: 130,
             color: "#38bdf8",
-            opacity: 0.35,
+            opacity: 0.3,
             width: 1
           },
 
           move: {
             enable: true,
-            speed: 0.7,
+            speed: 0.6,
             direction: "none",
             outModes: {
               default: "bounce"
@@ -70,35 +65,43 @@ function ParticlesBackground() {
           opacity: {
             value: 0.5
           }
+
         },
 
         interactivity: {
+
           events: {
             onHover: {
               enable: true,
               mode: "grab"
             },
+
             onClick: {
               enable: true,
               mode: "push"
             }
+
           },
 
           modes: {
+
             grab: {
-              distance: 200,
+              distance: 180,
               links: {
-                opacity: 0.8
+                opacity: 0.7
               }
             },
 
             push: {
-              quantity: 4
+              quantity: 3
             }
+
           }
+
         },
 
         detectRetina: true
+
       }}
     />
   );
