@@ -68,11 +68,11 @@ function Hero() {
           {/* Social Icons */}
           <div className="flex gap-6 mt-8 text-2xl">
 
-            <a target="_blank" href="https://github.com">
+            <a target="_blank" href="https://github.com/singh-abhinav1304">
               <FaGithub className="hover:text-sky-400"/>
             </a>
 
-            <a target="_blank" href="https://linkedin.com">
+            <a target="_blank" href="https://www.linkedin.com/in/singhabhinav13/">
               <FaLinkedin className="hover:text-sky-400"/>
             </a>
 

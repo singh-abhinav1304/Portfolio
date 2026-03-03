@@ -64,7 +64,7 @@ function Contact() {
             <div className="flex items-center gap-4">
               <FaLinkedin className="text-sky-400" />
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/singhabhinav13/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -75,7 +75,7 @@ function Contact() {
             <div className="flex items-center gap-4">
               <FaGithub className="text-sky-400" />
               <a
-                href="https://github.com"
+                href="https://github.com/singh-abhinav1304"
                 target="_blank"
                 rel="noopener noreferrer"
               >

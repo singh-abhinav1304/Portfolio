@@ -32,7 +32,7 @@ function Footer() {
                 <div className="flex justify-center gap-6 text-xl mb-6">
 
                     <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/singh-abhinav1304"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-sky-400 transition"
@@ -41,7 +41,7 @@ function Footer() {
                     </a>
 
                     <a
-                        href="https://linkedin.com/in/yourusername"
+                        href="https://www.linkedin.com/in/singhabhinav13/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-sky-400 transition"
